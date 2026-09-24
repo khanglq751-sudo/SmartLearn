@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tiến trình - SmartLearn</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        🧠 SmartLearn
+    </div>
+
+    <div class="top-actions">
+
+        <a href="../index.html">
+            🏠 Trang chủ
+        </a>
+
+        <a href="quiz.html">
+            ❓ Quiz
+        </a>
+
+        <a href="flashcard.html">
+            🧠 Flashcard
+        </a>
+
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <h2>📚 Môn học</h2>
+
+        <a href="math.html">
+            📐 Toán
+        </a>
+
+        <a href="informatics.html">
+            💻 Tin học
+        </a>
+
+        <a href="english.html">
+            🇬🇧 Tiếng Anh
+        </a>
+
+        <hr>
+
+        <h2>📊 Học tập</h2>
+
+        <a href="progress.html">
+            📊 Tiến trình
+        </a>
+
+        <a href="quiz.html">
+            ❓ Quiz
+        </a>
+
+        <a href="flashcard.html">
+            🧠 Flashcard
+        </a>
+
+        <a href="history.html">
+            📜 Lịch sử
+        </a>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <section class="page-header">
+
+            <p class="small-title">
+                📊 SmartLearn
+            </p>
+
+            <h1>Tiến trình học tập</h1>
+
+            <p>
+                Theo dõi mức độ nắm vững kiến thức của bạn.
+            </p>
+
+        </section>
+
+
+        <!-- TỔNG QUAN -->
+
+        <section class="progress-dashboard">
+
+            <div class="dashboard-card">
+                <span>📐</span>
+                <h3>Toán</h3>
+                <strong id="mathDashboard">0%</strong>
+
+                <div class="dashboard-bar">
+                    <div id="mathBar"></div>
+                </div>
+            </div>
+
+
+            <div class="dashboard-card">
+                <span>💻</span>
+                <h3>Tin học</h3>
+                <strong id="informaticsDashboard">0%</strong>
+
+                <div class="dashboard-bar">
+                    <div id="informaticsBar"></div>
+                </div>
+            </div>
+
+
+            <div class="dashboard-card">
+                <span>🇬🇧</span>
+                <h3>Tiếng Anh</h3>
+                <strong id="englishDashboard">0%</strong>
+
+                <div class="dashboard-bar">
+                    <div id="englishBar"></div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- CHỦ ĐỀ YẾU -->
+
+        <section class="analysis-card">
+
+            <p class="small-title">
+                🔎 Phân tích
+            </p>
+
+            <h2>Chủ đề cần ôn tập</h2>
+
+            <div id="weakTopic">
+                Đang phân tích...
+            </div>
+
+        </section>
+
+
+        <!-- GỢI Ý -->
+
+        <section class="analysis-card">
+
+            <p class="small-title">
+                🤖 SmartLearn
+            </p>
+
+            <h2>Gợi ý học tập</h2>
+
+            <p id="learningSuggestion">
+                Đang phân tích dữ liệu...
+            </p>
+
+            <button id="studyButton"
+                    class="learn-button"
+                    style="margin-top: 15px;">
+                Học ngay →
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<a href="chat.html"
+   class="floating-chat">
+    🤖
+</a>
+
+
+<script src="../js/progress.js"></script>
+
+</body>
+
+</html>

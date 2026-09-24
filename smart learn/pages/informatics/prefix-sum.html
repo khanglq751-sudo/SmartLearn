@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Prefix Sum - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <!-- THANH TRÊN -->
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+
+            <a href="../../index.html">
+                🏠 Trang chủ
+            </a>
+
+            <a href="../informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">📐 Toán</a>
+
+            <a href="../informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="../english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">❓ Quiz</a>
+
+            <a href="../flashcard.html">
+                🧠 Flashcard
+            </a>
+
+        </aside>
+
+
+        <!-- NỘI DUNG -->
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    💻 Tin học → Thuật toán → Prefix Sum
+                </p>
+
+                <h1>➕ Prefix Sum</h1>
+
+                <p class="lesson-intro">
+                    Kỹ thuật mảng cộng dồn giúp tính tổng
+                    một đoạn của mảng nhanh hơn.
+                </p>
+
+
+                <!-- KHÁI NIỆM -->
+                <div class="lesson-block">
+
+                    <h2>1. Prefix Sum là gì?</h2>
+
+                    <p>
+                        Prefix Sum là mảng lưu tổng các phần tử
+                        từ đầu mảng đến vị trí hiện tại.
+                    </p>
+
+                    <div class="formula">
+                        prefix[i] = prefix[i - 1] + a[i]
+                    </div>
+
+                    <p>
+                        Ta thường tạo mảng prefix có thêm một
+                        phần tử 0 ở đầu.
+                    </p>
+
+                    <div class="formula">
+                        prefix[0] = 0
+                    </div>
+
+                </div>
+
+
+                <!-- VÍ DỤ -->
+                <div class="lesson-block">
+
+                    <h2>2. Ví dụ</h2>
+
+                    <p>Mảng:</p>
+
+                    <div class="example">
+                        a = [2, 4, 6, 8, 10]
+                    </div>
+
+                    <p>Prefix Sum:</p>
+
+                    <div class="formula">
+                        prefix = [0, 2, 6, 12, 20, 30]
+                    </div>
+
+                    <p>
+                        Ví dụ cần tính tổng đoạn từ vị trí 2 đến 4
+                        (theo cách đánh số 1-based):
+                    </p>
+
+                    <div class="formula">
+                        prefix[4] - prefix[1]
+                    </div>
+
+                    <div class="formula">
+                        = 20 - 2 = 18
+                    </div>
+
+                </div>
+
+
+                <!-- CODE -->
+                <div class="lesson-block">
+
+                    <h2>3. 💻 Code Python</h2>
+
+                    <pre>
+a = [2, 4, 6, 8, 10]
+
+n = len(a)
+
+prefix = [0] * (n + 1)
+
+for i in range(1, n + 1):
+
+    prefix[i] = prefix[i - 1] + a[i - 1]
+
+print(prefix)
+                    </pre>
+
+                    <p>Kết quả:</p>
+
+                    <pre>
+[0, 2, 6, 12, 20, 30]
+                    </pre>
+
+                </div>
+
+
+                <!-- TÍNH TỔNG ĐOẠN -->
+                <div class="lesson-block">
+
+                    <h2>4. 🔎 Tính tổng đoạn [l, r]</h2>
+
+                    <p>
+                        Với đoạn từ <b>l</b> đến <b>r</b>,
+                        ta dùng:
+                    </p>
+
+                    <div class="formula">
+                        Sum(l, r) = prefix[r] - prefix[l - 1]
+                    </div>
+
+                    <p>
+                        Đây là công thức rất quan trọng.
+                    </p>
+
+                </div>
+
+
+                <!-- TEST CASE -->
+                <div class="lesson-block">
+
+                    <h2>5. 🧪 Test case</h2>
+
+                    <p><b>Input:</b></p>
+
+                    <pre>
+5
+2 4 6 8 10
+2 4
+                    </pre>
+
+                    <p>
+                        Tính tổng các phần tử từ vị trí 2 đến 4.
+                    </p>
+
+                    <p><b>Output:</b></p>
+
+                    <pre>
+18
+                    </pre>
+
+                </div>
+
+
+                <!-- BÀI TẬP -->
+                <div class="lesson-block exercise">
+
+                    <h2>6. 📝 Bài tập</h2>
+
+                    <p>
+                        Cho mảng:
+                    </p>
+
+                    <div class="example">
+                        3, 5, 2, 7, 4
+                    </div>
+
+                    <p>
+                        Tính tổng các phần tử từ vị trí
+                        <b>2 đến 4</b>.
+                    </p>
+
+                    <input
+                        type="number"
+                        id="answerInput"
+                        placeholder="Nhập đáp án">
+
+                    <button onclick="checkPrefixAnswer()">
+                        Kiểm tra
+                    </button>
+
+                    <p id="exerciseResult"></p>
+
+                </div>
+
+
+                <!-- TIẾN TRÌNH -->
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Prefix Sum:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+
+                        <div id="progressFill"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- TRỢ LÝ -->
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+
+    <script src="../../js/informatics.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>

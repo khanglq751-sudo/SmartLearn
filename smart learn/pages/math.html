@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Toán - SmartLearn</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- THANH TRÊN -->
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+
+            <a href="../index.html">
+                🏠 Trang chủ
+            </a>
+
+            <a href="quiz.html">
+                ❓ Quiz
+            </a>
+
+            <a href="flashcard.html">
+                🧠 Flashcard
+            </a>
+
+            <div class="progress-mini">
+                📊 <span>0%</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="math.html">
+                📐 Toán
+            </a>
+
+            <a href="informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="quiz.html">
+                ❓ Quiz
+            </a>
+
+            <a href="flashcard.html">
+                🧠 Flashcard
+            </a>
+
+        </aside>
+
+
+        <!-- NỘI DUNG -->
+        <main class="main-content">
+
+            <section class="page-header">
+
+                <p class="small-title">
+                    📚 Môn học
+                </p>
+
+                <h1>📐 Toán</h1>
+
+                <p>
+                    Chọn một dạng bài để bắt đầu học.
+                </p>
+
+            </section>
+
+
+            <section class="topics">
+
+                <h2>📖 Các dạng bài</h2>
+
+                <div class="topic-grid">
+
+                    <!-- CẤP SỐ CỘNG -->
+                    <div class="topic-card">
+
+                        <div class="topic-icon">
+                            📈
+                        </div>
+
+                        <h3>Cấp số cộng</h3>
+
+                        <p>
+                            Công thức, tính số hạng,
+                            tổng và bài tập.
+                        </p>
+
+                        <a href="math/cap-so-cong.html"
+                           class="learn-button">
+                            Học bài →
+                        </a>
+
+                    </div>
+
+
+                    <!-- CẤP SỐ NHÂN -->
+                    <div class="topic-card">
+
+                        <div class="topic-icon">
+                            📊
+                        </div>
+
+                        <h3>Cấp số nhân</h3>
+
+                        <p>
+                            Số hạng tổng quát,
+                            tổng và bài tập.
+                        </p>
+
+                        <a href="math/cap-so-nhan.html"
+                           class="learn-button">
+                            Học bài →
+                        </a>
+
+                    </div>
+
+
+                    <!-- HÀM SỐ -->
+                    <div class="topic-card">
+
+                        <div class="topic-icon">
+                            📉
+                        </div>
+
+                        <h3>Hàm số</h3>
+
+                        <p>
+                            Khảo sát, đồ thị
+                            và các dạng bài cơ bản.
+                        </p>
+
+                        <a href="math/ham-so.html"
+                           class="learn-button">
+                            Học bài →
+                        </a>
+
+                    </div>
+
+
+                    <!-- GIỚI HẠN -->
+                    <div class="topic-card">
+
+                        <div class="topic-icon">
+                            ∞
+                        </div>
+
+                        <h3>Giới hạn</h3>
+
+                        <p>
+                            Giới hạn dãy số,
+                            hàm số và bài tập.
+                        </p>
+
+                        <a href="math/gioi-han.html"
+                           class="learn-button">
+                            Học bài →
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- GỢI Ý -->
+            <section class="recommend-card">
+                <p class="small-title">
+                    🤖 SmartLearn
+                </p>
+                <h2>Gợi ý cho bạn</h2>
+                <p>
+                    Hệ thống sẽ dựa vào kết quả học tập
+                    để đề xuất dạng bài bạn nên ôn lại.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <!-- TRỢ LÝ NỔI -->
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+     <script src="../js/chat.js"></script>
+
+    </body>
+
+</html>

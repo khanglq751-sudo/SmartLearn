@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartLearn</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- THANH TRÊN -->
+    <header class="topbar">
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+        <div class="top-actions">
+            <a href="pages/quiz.html">❓ Quiz</a>
+            <a href="pages/flashcard.html">🧠 Flashcard</a>
+            <a href="pages/chat.html">🤖 Trợ lý</a>
+
+            <button
+                class="progress-button"
+                onclick="toggleProgress()">
+
+                📊 <span id="overallProgress">0%</span>
+
+            </button>
+        </div>
+    </header>
+    <!-- BỐ CỤC CHÍNH -->
+    <div class="layout">
+        <!-- THANH BÊN TRÁI -->
+        <aside class="sidebar">
+            <h2>📚 Môn học</h2>
+            <a href="pages/math.html">
+                📐 Toán
+            </a>
+            <a href="pages/informatics.html">
+                💻 Tin học
+            </a>
+            <a href="pages/english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+            <hr>
+            <h2>🛠 Công cụ</h2>
+            <a href="pages/quiz.html">
+                ❓ Quiz
+            </a>
+            <a href="pages/flashcard.html">
+                🧠 Flashcard
+            </a>
+            <a href="pages/progress.html">
+                📊 Tiến trình
+            </a>
+            <a href="pages/history.html">
+                📜 Lịch sử
+            </a>
+            <a href="pages/chat.html">
+                🤖 Trợ lý học tập
+            </a>
+        </aside>
+        <!-- NỘI DUNG CHÍNH -->
+        <main class="main-content">
+            <!-- LỜI CHÀO -->
+            <section class="welcome">
+                <h1>👋 Xin chào!</h1>
+                <p>
+                    Chào mừng bạn đến với
+                    <strong>SmartLearn</strong>
+                </p>
+                <p>
+                    Hãy chọn một môn học để bắt đầu.
+                </p>
+            </section>
+            <!-- CÁC MÔN -->
+            <section class="subjects">
+                <h2>📚 Chọn môn học</h2>
+                <div class="subject-grid">
+                    <!-- TOÁN -->
+                    <div class="subject-card">
+                        <div class="subject-icon">
+                            📐
+                        </div>
+                        <h3>Toán</h3>
+                        <p>
+                            Học lý thuyết, dạng bài
+                            và luyện tập Toán.
+                        </p>
+                        <a href="pages/math.html"
+                           class="learn-button">
+                            Học Toán →
+                        </a>
+                    </div>
+                    <!-- TIN -->
+                    <div class="subject-card">
+                        <div class="subject-icon">
+                            💻
+                        </div>
+                        <h3>Tin học</h3>
+                        <p>
+                            Học Python, thuật toán
+                            và lập trình.
+                        </p>
+                        <a href="pages/informatics.html"
+                           class="learn-button">
+                            Học Tin →
+                        </a>
+                    </div>
+                    <!-- ANH -->
+                    <div class="subject-card">
+                        <div class="subject-icon">
+                            🇬🇧
+                        </div>
+                        <h3>Tiếng Anh</h3>
+                        <p>
+                            Học từ vựng, ngữ pháp
+                            và luyện đọc.
+                        </p>
+                        <a href="pages/english.html"
+                           class="learn-button">
+                            Học Anh →
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- TIẾP TỤC HỌC -->
+            <section class="continue-learning">
+                <h2>📖 Tiếp tục học</h2>
+                <div class="continue-card">
+                    <div>
+                        <h3>💻 Python cơ bản</h3>
+                        <p>
+                            Tiếp tục bài học bạn đang học.
+                        </p>
+                    </div>
+                    <a href="pages/informatics.html"
+                       class="learn-button">
+                        Tiếp tục →
+                    </a>
+                </div>
+                </section>
+                        </a>
+                    </section>
+                    <!-- BẢNG TIẾN TRÌNH -->
+                    <div id="progressPanel"
+                         class="progress-panel">
+
+                        <div class="progress-panel-header">
+
+                            <h3>📊 Tiến trình học</h3>
+
+                            <button onclick="toggleProgress()">
+                                ✕
+                            </button>
+
+                        </div>
+
+                        <div class="progress-subject">
+
+                            <div>
+                                📐 Toán
+                                <span id="mathProgress">0%</span>
+                            </div>
+
+                            <div class="subject-progress-bar">
+                                <div></div>
+                            </div>
+
+                        </div>
+
+                        <div class="progress-subject">
+
+                            <div>
+                                💻 Tin học
+                                <span id="informaticsProgress">0%</span>
+                            </div>
+
+                            <div class="subject-progress-bar">
+                                <div></div>
+                            </div>
+
+                        </div>
+
+                        <div class="progress-subject">
+
+                            <div>
+                                🇬🇧 Tiếng Anh
+                                <span id="englishProgress">0%</span>
+                            </div>
+
+                            <div class="subject-progress-bar">
+                                <div></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- NÚT TRỢ LÝ NỔI -->
+                    <button class="floating-chat"
+                    onclick="toggleChat()"
+                    title="Trợ lý học tập">
+                        🤖
+                    </button>
+                    <!-- KHUNG CHAT -->
+                    <div id="chatBox" class="chat-box">
+
+                        <div class="chat-header">
+
+                            <div>
+                                🤖 <b>SmartLearn Assistant</b>
+                            </div>
+
+                            <button onclick="toggleChat()">
+                                ✕
+                            </button>
+
+                        </div>
+
+                        <div id="chatMessages" class="chat-messages">
+
+                            <div class="bot-message">
+                                👋 Xin chào! Mình là trợ lý SmartLearn.
+                                Bạn đang không hiểu phần nào?
+                            </div>
+
+                        </div>
+
+                        <div class="chat-input">
+
+                            <input
+                                type="text"
+                                id="chatInput"
+                                placeholder="Nhập câu hỏi...">
+
+                            <button onclick="sendMessage()">
+                                Gửi
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <script src="js/main.js"></script>
+                    <script src="js/chat.js"></script>
+                    <script src="js/progress.js"></script>
+
+</body>
+</html>

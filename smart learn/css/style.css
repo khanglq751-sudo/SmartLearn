@@ -1,0 +1,1544 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #0f1115;
+    color: #f5f7fb;
+}
+
+
+/* =========================
+   THANH TRÊN
+========================= */
+
+.topbar {
+    height: 70px;
+    background: #151821;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 30px;
+
+    border-bottom: 1px solid #292b38;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-actions a {
+    text-decoration: none;
+    color: #e5e7eb;
+}
+
+.top-actions a:hover {
+    color: #a5b4fc;
+}
+
+.progress-mini {
+    background: #252a36;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   BỐ CỤC
+========================= */
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 230px;
+    background: #151821;
+
+    padding: 25px 15px;
+
+    border-right: 1px solid #292b38;
+}
+
+.sidebar h2 {
+    font-size: 16px;
+    margin: 10px 10px 15px;
+}
+
+.sidebar a {
+    display: block;
+
+    padding: 12px 15px;
+    margin-bottom: 5px;
+
+    text-decoration: none;
+
+    color: #ccc;
+
+    border-radius: 10px;
+}
+
+.sidebar a:hover {
+    background: #252a36;
+    color: #8b8cff;
+}
+
+.sidebar hr {
+    border: none;
+    border-top: 1px solid #292b38;
+    margin: 20px 5px;
+}
+
+
+/* =========================
+   NỘI DUNG
+========================= */
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+    background: #181c25;
+    color: white;
+    padding: 35px;
+    border-radius: 15px;
+    margin-bottom: 35px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.welcome h1 {
+    margin-bottom: 12px;
+}
+
+.welcome p {
+    margin-top: 8px;
+    color: white;
+}
+
+.welcome strong {
+    color: white;
+}
+
+
+/* =========================
+   MÔN HỌC
+========================= */
+
+.subjects h2 {
+    margin-bottom: 20px;
+}
+
+.subject-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.subject-card {
+    background: #181c25;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.06);
+
+    transition: 0.2s;
+}
+
+.subject-card:hover {
+    transform: translateY(-4px);
+}
+
+.subject-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.subject-card h3 {
+    margin-bottom: 10px;
+    color: #f5f7fb;
+}
+
+.subject-card p {
+    color: #aaa;
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   NÚT
+========================= */
+
+.learn-button {
+    display: inline-block;
+
+    background: #4f46e5;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+}
+
+.learn-button:hover {
+    background: #3730a3;
+}
+
+
+/* =========================
+   TIẾP TỤC HỌC
+========================= */
+
+.continue-learning {
+    margin-top: 40px;
+}
+
+.continue-learning h2 {
+    margin-bottom: 20px;
+}
+
+.continue-card {
+    background: #181c25;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.continue-card p {
+    margin-top: 8px;
+    color: #aaa;
+}
+
+
+/* =========================
+   TRỢ LÝ
+========================= */
+
+.assistant-box {
+    margin-top: 40px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.assistant-box p {
+    margin-top: 8px;
+    color: #666;
+}
+
+.chat-button {
+    background: #111827;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+}
+
+.chat-button:hover {
+    background: #374151;
+}
+
+
+/* =========================
+   ĐIỆN THOẠI
+========================= */
+
+@media (max-width: 800px) {
+
+    .topbar {
+        height: auto;
+        min-height: 70px;
+        padding: 14px 18px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .sidebar {
+        width: 190px;
+        padding: 20px 10px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .continue-card,
+    .assistant-box {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .top-actions a {
+        display: none;
+    }
+}
+/* =========================
+   TRỢ LÝ NỔI
+========================= */
+
+.floating-chat {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #000;
+    color: white;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    border: none;
+    cursor: pointer;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.2);
+
+    z-index: 1000;
+
+    transition: 0.2s;
+}
+
+.floating-chat:hover {
+    transform: scale(1.1);
+    background: #222;
+}
+
+.chat-box {
+    position: fixed;
+    right: 25px;
+    bottom: 100px;
+    width: min(360px, calc(100vw - 40px));
+    background: #181c25;
+    color: white;
+    border: 1px solid #292b38;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: 0.2s;
+    z-index: 999;
+}
+
+.chat-box.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    background: #252a36;
+}
+
+.chat-header button {
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 280px;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.bot-message,
+.user-message {
+    max-width: 85%;
+    padding: 9px 11px;
+    border-radius: 8px;
+    line-height: 1.4;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background: #252a36;
+}
+
+.user-message {
+    align-self: flex-end;
+    background: #4f46e5;
+}
+
+.chat-input {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    border-top: 1px solid #292b38;
+}
+
+.chat-input input {
+    min-width: 0;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #454a59;
+    border-radius: 6px;
+    background: #101319;
+    color: white;
+}
+
+.chat-input button {
+    border: none;
+    border-radius: 6px;
+    padding: 0 13px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+}
+/* =========================
+   TRANG MÔN HỌC
+========================= */
+
+.page-header {
+    background: #181c25;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 35px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.small-title {
+    color: #8b8cff;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.page-header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.page-header p:last-child {
+    color: #aaa;
+}
+
+
+/* =========================
+   CÁC DẠNG BÀI
+========================= */
+
+.topics h2 {
+    margin-bottom: 20px;
+}
+
+.topic-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.topic-card {
+    background: #181c25;
+
+    padding: 28px;
+
+    border-radius: 15px;
+
+    border: 1px solid #292d38;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.topic-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #4f46e5;
+}
+
+.topic-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.topic-card h3 {
+    margin-bottom: 10px;
+}
+
+.topic-card p {
+    color: #aaa;
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   GỢI Ý
+========================= */
+
+.recommend-card {
+    margin-top: 35px;
+
+    background: #181c25;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #292d38;
+}
+
+.recommend-card h2 {
+    margin-bottom: 10px;
+}
+
+.recommend-card p:last-child {
+    color: #aaa;
+    line-height: 1.6;
+}
+/* =========================
+   BÀI HỌC
+========================= */
+
+.lesson-page {
+    max-width: 850px;
+    margin: auto;
+}
+
+.lesson-page h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.lesson-intro {
+    color: #aaa;
+    margin-bottom: 35px;
+}
+
+.lesson-block {
+    background: #181c25;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #292d38;
+
+    margin-bottom: 20px;
+}
+
+.lesson-block h2 {
+    margin-bottom: 18px;
+}
+
+.lesson-block h3 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.lesson-block p {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+/* Công thức */
+
+.formula {
+    background: #101319;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    font-size: 21px;
+
+    margin: 15px 0;
+
+    border: 1px solid #292d38;
+}
+
+
+/* Ví dụ */
+
+.example {
+    background: #101319;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+
+    margin: 15px 0;
+}
+
+
+/* Bài tập */
+
+.exercise input {
+    width: 100%;
+    max-width: 350px;
+
+    padding: 12px;
+
+    background: #101319;
+
+    color: white;
+
+    border: 1px solid #444;
+
+    border-radius: 8px;
+
+    margin: 10px 10px 10px 0;
+}
+
+.exercise button {
+    margin-top: 10px;
+}
+
+#exerciseResult {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+/* Tiến trình */
+
+.lesson-progress {
+    background: #181c25;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #292d38;
+}
+
+.lesson-progress h2 {
+    margin-bottom: 15px;
+}
+
+.lesson-progress-bar {
+    width: 100%;
+    height: 14px;
+
+    background: #292d38;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-top: 12px;
+}
+
+#progressFill {
+    width: 0%;
+    height: 100%;
+
+    background: #4f46e5;
+
+    transition: width 0.4s;
+}
+.algorithm-section {
+    margin-top: 40px;
+}
+.lesson-option {
+    display: block;
+
+    width: 100%;
+    max-width: 500px;
+
+    margin: 10px auto;
+
+    text-align: left;
+}
+/* =========================
+   READING
+========================= */
+
+.reading-text {
+    background: #101319;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+.reading-text p {
+    margin-bottom: 15px;
+}
+
+.reading-text p:last-child {
+    margin-bottom: 0;
+}
+/* =========================
+   CHAT BOX
+========================= */
+
+.floating-chat {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #4f46e5;
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.3);
+
+    z-index: 1000;
+}
+
+.floating-chat:hover {
+    transform: scale(1.08);
+}
+
+
+/* KHUNG CHAT */
+
+.chat-box {
+    position: fixed;
+
+    right: 25px;
+    bottom: 95px;
+
+    width: 350px;
+    height: 480px;
+
+    background: #181c25;
+
+    border: 1px solid #292d38;
+    border-radius: 15px;
+
+    display: none;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.5);
+
+    z-index: 999;
+}
+
+.chat-box.open {
+    display: flex;
+}
+
+
+/* HEADER */
+
+.chat-header {
+    height: 55px;
+
+    padding: 0 15px;
+
+    background: #202532;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-header button {
+    background: transparent;
+    padding: 5px 10px;
+}
+
+
+/* TIN NHẮN */
+
+.chat-messages {
+    flex: 1;
+
+    padding: 15px;
+
+    overflow-y: auto;
+}
+
+.bot-message,
+.user-message {
+    max-width: 85%;
+
+    padding: 10px 13px;
+
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    line-height: 1.5;
+}
+
+.bot-message {
+    background: #252a36;
+}
+
+.user-message {
+    background: #4f46e5;
+
+    margin-left: auto;
+}
+
+
+/* Ô NHẬP */
+
+.chat-input {
+    display: flex;
+
+    gap: 8px;
+
+    padding: 12px;
+
+    border-top: 1px solid #292d38;
+}
+
+.chat-input input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 10px;
+
+    background: #101319;
+
+    color: white;
+
+    border: 1px solid #444;
+
+    border-radius: 8px;
+}
+
+.chat-input button {
+    padding: 10px 15px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .chat-box {
+        right: 10px;
+        bottom: 85px;
+
+        width: calc(100% - 20px);
+    }
+
+    .floating-chat {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/* =========================
+   TIẾN TRÌNH NỔI
+========================= */
+
+.progress-button {
+    background: #202532;
+    color: white;
+
+    border: 1px solid #343947;
+
+    padding: 9px 14px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.progress-button:hover {
+    background: #2b3140;
+}
+
+.progress-panel {
+    position: fixed;
+
+    top: 80px;
+    right: 25px;
+
+    width: 300px;
+
+    background: #181c25;
+
+    border: 1px solid #292d38;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    display: none;
+
+    z-index: 1001;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.progress-panel-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.progress-panel-header button {
+    background: transparent;
+    padding: 5px 8px;
+}
+
+.progress-subject {
+    margin-bottom: 18px;
+}
+
+.progress-subject > div:first-child {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+.subject-progress-bar {
+    height: 10px;
+
+    background: #292d38;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.subject-progress-bar div {
+    height: 100%;
+
+    background: #4f46e5;
+
+    width: 0%;
+
+    border-radius: 10px;
+}
+/* =========================
+   DASHBOARD TIẾN TRÌNH
+========================= */
+
+.progress-dashboard {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.dashboard-card {
+    background: #181c25;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #292d38;
+}
+
+.dashboard-card span {
+    font-size: 30px;
+}
+
+.dashboard-card h3 {
+    margin: 10px 0;
+}
+
+.dashboard-card strong {
+    font-size: 28px;
+}
+
+.dashboard-bar {
+    height: 10px;
+
+    background: #292d38;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-top: 15px;
+}
+
+.dashboard-bar div {
+    height: 100%;
+
+    width: 0%;
+
+    background: #4f46e5;
+
+    transition: width 0.5s;
+}
+
+
+.analysis-card {
+    background: #181c25;
+
+    border: 1px solid #292d38;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    margin-bottom: 20px;
+}
+
+.analysis-card h2 {
+    margin-bottom: 15px;
+}
+
+#weakTopic {
+    font-size: 20px;
+
+    line-height: 1.6;
+}
+
+
+@media (max-width: 800px) {
+
+    .progress-dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-page {
+    max-width: 750px;
+    margin: auto;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+.quiz-card {
+    background: #181c25;
+    border: 1px solid #292d38;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.quiz-card h2 {
+    margin-bottom: 25px;
+}
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+
+    text-align: left;
+
+    background: #202532;
+    color: white;
+
+    border: 1px solid #343947;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.quiz-option:hover {
+    background: #2a3040;
+}
+
+.quiz-option:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+#quizResult {
+    margin: 20px 0;
+    font-weight: bold;
+}
+/* =========================
+   FLASHCARD
+========================= */
+
+.flashcard-page {
+    max-width: 750px;
+    margin: auto;
+}
+
+.flashcard-main {
+    background: #181c25;
+
+    border: 1px solid #292d38;
+
+    border-radius: 18px;
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+#flashcardSubject {
+    color: #8b8cff;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+#flashcardQuestion {
+    font-size: 28px;
+
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+}
+
+.flashcard-answer {
+    display: none;
+
+    background: #101319;
+
+    border: 1px solid #292d38;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    font-size: 22px;
+
+    margin-bottom: 25px;
+}
+
+.flashcard-rating {
+    display: none;
+
+    margin-top: 25px;
+}
+
+.flashcard-rating p {
+    margin-bottom: 15px;
+
+    color: #aaa;
+}
+
+.rating-btn {
+    margin: 5px;
+}
+
+.next-flashcard {
+    margin-top: 25px;
+
+    background: #202532;
+
+    border: 1px solid #343947;
+}
+
+.next-flashcard:hover {
+    background: #2b3140;
+}
+/* =========================
+   SMARTLEARN CHAT
+========================= */
+
+.chat-box {
+    position: fixed;
+
+    right: 25px;
+    bottom: 95px;
+
+    width: 360px;
+    height: 500px;
+
+    display: none;
+    flex-direction: column;
+
+    background: #111318 !important;
+    color: #f5f5f5 !important;
+
+    border: 1px solid #2c3140;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.55);
+
+    z-index: 2000;
+}
+
+.chat-box.open {
+    display: flex;
+}
+
+
+/* HEADER */
+
+.chat-header {
+    height: 60px;
+
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #191d26 !important;
+
+    border-bottom: 1px solid #2c3140;
+}
+
+.chat-header div {
+    color: #ffffff !important;
+}
+
+.chat-header button {
+    background: transparent !important;
+    color: #ffffff !important;
+
+    border: none;
+
+    font-size: 20px;
+
+    padding: 5px 8px;
+
+    cursor: pointer;
+}
+
+
+/* KHU VỰC TIN NHẮN */
+
+.chat-messages {
+    flex: 1;
+
+    padding: 16px;
+
+    overflow-y: auto;
+
+    background: #111318 !important;
+}
+
+
+/* TIN NHẮN BOT */
+
+.bot-message {
+    width: fit-content;
+    max-width: 85%;
+
+    padding: 11px 14px;
+
+    margin-bottom: 12px;
+
+    background: #232833 !important;
+    color: #f5f5f5 !important;
+
+    border-radius: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* TIN NHẮN NGƯỜI DÙNG */
+
+.user-message {
+    width: fit-content;
+    max-width: 85%;
+
+    padding: 11px 14px;
+
+    margin-left: auto;
+    margin-bottom: 12px;
+
+    background: #4f46e5 !important;
+    color: #ffffff !important;
+
+    border-radius: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* Ô NHẬP */
+
+.chat-input {
+    display: flex;
+
+    gap: 8px;
+
+    padding: 12px;
+
+    background: #191d26 !important;
+
+    border-top: 1px solid #2c3140;
+}
+
+
+.chat-input input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 11px 12px;
+
+    background: #0b0d11 !important;
+    color: #ffffff !important;
+
+    border: 1px solid #353b4a;
+
+    border-radius: 9px;
+
+    outline: none;
+}
+
+.chat-input input::placeholder {
+    color: #8b91a1;
+}
+
+
+.chat-input button {
+    background: #4f46e5 !important;
+    color: white !important;
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 10px 16px;
+
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background: #6366f1 !important;
+}
+
+
+/* NÚT ROBOT */
+
+.floating-chat {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #4f46e5 !important;
+    color: white !important;
+
+    border: none;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.4);
+
+    z-index: 2001;
+}
+
+.floating-chat:hover {
+    transform: scale(1.08);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .chat-box {
+        right: 10px;
+        bottom: 85px;
+
+        width: calc(100% - 20px);
+        height: 70vh;
+    }
+
+    .floating-chat {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+.quick-chat {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    padding: 10px;
+    background: #151821;
+    border-top: 1px solid #292d38;
+    border-bottom: 1px solid #292d38;
+}
+
+.quick-chat button {
+    background: #202532;
+    color: #ddd;
+    border: 1px solid #343947;
+    border-radius: 8px;
+    padding: 7px 9px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.quick-chat button:hover {
+    background: #303749;
+}
+
+@media (max-width: 520px) {
+
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #292b38;
+    }
+
+    .sidebar h2,
+    .sidebar hr {
+        display: none;
+    }
+
+    .sidebar a {
+        display: inline-block;
+        margin: 3px;
+        padding: 9px 10px;
+    }
+
+    .main-content {
+        padding: 24px 16px;
+    }
+
+    .chat-box {
+        right: 10px;
+        bottom: 85px;
+        width: calc(100vw - 20px);
+        height: min(500px, 70vh);
+    }
+}

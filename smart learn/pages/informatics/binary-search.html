@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Binary Search - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+
+            <a href="../../index.html">
+                🏠 Trang chủ
+            </a>
+
+            <a href="../informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">📐 Toán</a>
+            <a href="../informatics.html">💻 Tin học</a>
+            <a href="../english.html">🇬🇧 Tiếng Anh</a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">❓ Quiz</a>
+            <a href="../flashcard.html">🧠 Flashcard</a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    💻 Tin học → Thuật toán → Binary Search
+                </p>
+
+                <h1>🔎 Binary Search</h1>
+
+                <p class="lesson-intro">
+                    Tìm kiếm nhị phân trên mảng đã sắp xếp.
+                </p>
+
+
+                <!-- KHÁI NIỆM -->
+                <div class="lesson-block">
+
+                    <h2>1. Binary Search là gì?</h2>
+
+                    <p>
+                        Binary Search là thuật toán tìm kiếm bằng cách
+                        liên tục chia đôi phạm vi cần tìm.
+                    </p>
+
+                    <p>
+                        Điều kiện quan trọng:
+                        <b>mảng phải được sắp xếp</b>.
+                    </p>
+
+                </div>
+
+
+                <!-- MID -->
+                <div class="lesson-block">
+
+                    <h2>2. 🧠 mid là gì?</h2>
+
+                    <p>
+                        <b>mid</b> là vị trí nằm giữa <b>left</b>
+                        và <b>right</b>.
+                    </p>
+
+                    <div class="formula">
+                        mid = (left + right) // 2
+                    </div>
+
+                    <p>
+                        Ta lấy phần tử ở vị trí <b>mid</b>
+                        để quyết định tìm sang trái hay phải.
+                    </p>
+
+                </div>
+
+
+                <!-- CÁCH HOẠT ĐỘNG -->
+                <div class="lesson-block">
+
+                    <h2>3. Cách hoạt động</h2>
+
+                    <div class="example">
+                        1, 3, 5, 7, 9, 12, 15
+                    </div>
+
+                    <p>
+                        Tìm số <b>12</b>.
+                    </p>
+
+                    <div class="formula">
+                        left = 0<br>
+                        right = 6<br>
+                        mid = 3
+                    </div>
+
+                    <p>
+                        a[mid] = 7.
+                    </p>
+
+                    <p>
+                        Vì:
+                        <b>7 &lt; 12</b>
+                        → bỏ nửa bên trái.
+                    </p>
+
+                    <div class="formula">
+                        left = mid + 1
+                    </div>
+
+                    <p>
+                        Tiếp tục chia đôi cho đến khi tìm thấy 12.
+                    </p>
+
+                </div>
+
+
+                <!-- CODE CƠ BẢN -->
+                <div class="lesson-block">
+
+                    <h2>4. 💻 Code Python</h2>
+
+                    <pre>
+a = [1, 3, 5, 7, 9, 12, 15]
+
+x = 12
+
+left = 0
+right = len(a) - 1
+
+while left &lt;= right:
+
+    mid = (left + right) // 2
+
+    if a[mid] == x:
+        print("Tìm thấy")
+        break
+
+    elif a[mid] &lt; x:
+        left = mid + 1
+
+    else:
+        right = mid - 1
+                    </pre>
+
+                </div>
+
+
+                <!-- CHECK -->
+                <div class="lesson-block">
+
+                    <h2>5. ✅ Hàm check</h2>
+
+                    <p>
+                        Trong nhiều bài nâng cao, ta không tìm trực tiếp
+                        mà dùng một hàm <b>check(mid)</b>.
+                    </p>
+
+                    <pre>
+def check(mid):
+    # Kiểm tra mid có thỏa điều kiện không
+    return True
+                    </pre>
+
+                    <p>
+                        Sau đó Binary Search trên đáp án.
+                    </p>
+
+                </div>
+
+
+                <!-- TEST CASE -->
+                <div class="lesson-block">
+
+                    <h2>6. 🧪 Test case</h2>
+
+                    <p><b>Input:</b></p>
+
+                    <pre>
+7
+1 3 5 7 9 12 15
+12
+                    </pre>
+
+                    <p><b>Output:</b></p>
+
+                    <pre>
+5
+                    </pre>
+
+                    <p>
+                        Vì 12 nằm ở vị trí <b>5</b>
+                        nếu đánh số từ 0.
+                    </p>
+
+                </div>
+
+
+                <!-- BÀI TẬP -->
+                <div class="lesson-block exercise">
+
+                    <h2>7. 📝 Bài tập</h2>
+
+                    <p>
+                        Cho mảng:
+                    </p>
+
+                    <div class="example">
+                        2, 4, 6, 8, 10, 12, 14
+                    </div>
+
+                    <p>
+                        Hãy nhập <b>vị trí (index)</b> của số <b>10</b>.
+                    </p>
+
+                    <input
+                        type="number"
+                        id="answerInput"
+                        placeholder="Nhập index">
+
+                    <button onclick="checkBinaryAnswer()">
+                        Kiểm tra
+                    </button>
+
+                    <p id="exerciseResult"></p>
+
+                </div>
+
+
+                <!-- TIẾN TRÌNH -->
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Binary Search:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+
+                        <div id="progressFill"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+
+    <script src="../../js/informatics.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>

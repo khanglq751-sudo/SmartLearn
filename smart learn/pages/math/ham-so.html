@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hàm số - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+            <a href="../../index.html">🏠 Trang chủ</a>
+            <a href="../math.html">📐 Toán</a>
+            <a href="../quiz.html">❓ Quiz</a>
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">📐 Toán</a>
+            <a href="../informatics.html">💻 Tin học</a>
+            <a href="../english.html">🇬🇧 Tiếng Anh</a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">❓ Quiz</a>
+            <a href="../flashcard.html">🧠 Flashcard</a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    📐 Toán → Hàm số
+                </p>
+
+                <h1>📉 Hàm số</h1>
+
+                <p class="lesson-intro">
+                    Làm quen với hàm số, tập xác định và giá trị hàm số.
+                </p>
+
+
+                <div class="lesson-block">
+
+                    <h2>1. Khái niệm</h2>
+
+                    <p>
+                        Hàm số là quy tắc cho tương ứng mỗi giá trị
+                        của x với một giá trị duy nhất của y.
+                    </p>
+
+                    <div class="formula">
+                        y = f(x)
+                    </div>
+
+                </div>
+
+
+                <div class="lesson-block">
+
+                    <h2>2. Ví dụ</h2>
+
+                    <p>
+                        Cho hàm số:
+                    </p>
+
+                    <div class="formula">
+                        f(x) = 2x + 1
+                    </div>
+
+                    <p>
+                        Khi x = 3:
+                    </p>
+
+                    <div class="formula">
+                        f(3) = 2 × 3 + 1 = 7
+                    </div>
+
+                </div>
+
+
+                <div class="lesson-block exercise">
+
+                    <h2>3. 📝 Bài tập</h2>
+
+                    <p>
+                        Cho:
+                    </p>
+
+                    <div class="formula">
+                        f(x) = 3x + 2
+                    </div>
+
+                    <p>
+                        Tính f(4).
+                    </p>
+
+                    <input
+                        type="number"
+                        id="answerInput"
+                        placeholder="Nhập đáp án">
+
+                    <button onclick="checkAnswer()">
+                        Kiểm tra
+                    </button>
+
+                    <p id="exerciseResult"></p>
+
+                </div>
+
+
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Hàm số:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+                        <div id="progressFill"></div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+    <script src="../../js/math.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>

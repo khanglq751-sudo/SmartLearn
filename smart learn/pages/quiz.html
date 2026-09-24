@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz - SmartLearn</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        🧠 SmartLearn
+    </div>
+
+    <div class="top-actions">
+        <a href="../index.html">🏠 Trang chủ</a>
+        <a href="math.html">📐 Toán</a>
+        <a href="informatics.html">💻 Tin học</a>
+        <a href="english.html">🇬🇧 Tiếng Anh</a>
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <h2>📚 Môn học</h2>
+
+        <a href="math.html">📐 Toán</a>
+        <a href="informatics.html">💻 Tin học</a>
+        <a href="english.html">🇬🇧 Tiếng Anh</a>
+
+        <hr>
+
+        <h2>🛠 Công cụ</h2>
+
+        <a href="quiz.html">❓ Quiz</a>
+        <a href="flashcard.html">🧠 Flashcard</a>
+        <a href="progress.html">📊 Tiến trình</a>
+        <a href="history.html">📜 Lịch sử</a>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <section class="page-header">
+
+            <p class="small-title">
+                ❓ SmartLearn
+            </p>
+
+            <h1>Quiz</h1>
+
+            <p>
+                Kiểm tra nhanh kiến thức của bạn.
+            </p>
+
+        </section>
+
+
+        <section class="quiz-page">
+
+            <div class="quiz-info">
+
+                <span id="quizSubject">
+                    📚 Tổng hợp
+                </span>
+
+                <span>
+                    Câu <b id="questionNumber">1</b>
+                </span>
+
+                <span>
+                    Điểm: <b id="score">0</b>
+                </span>
+
+            </div>
+
+
+            <div class="quiz-card">
+
+                <h2 id="quizQuestion">
+                    Đang tải câu hỏi...
+                </h2>
+
+                <div id="quizOptions"></div>
+
+                <p id="quizResult"></p>
+
+                <button id="nextQuiz"
+                        class="learn-button">
+                    Câu tiếp theo →
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<a href="chat.html"
+   class="floating-chat">
+    🤖
+</a>
+
+
+<script src="../js/quiz.js"></script>
+
+</body>
+
+</html>

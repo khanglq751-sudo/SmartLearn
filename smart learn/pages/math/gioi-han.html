@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giới hạn - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+            <a href="../../index.html">🏠 Trang chủ</a>
+            <a href="../math.html">📐 Toán</a>
+            <a href="../quiz.html">❓ Quiz</a>
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">📐 Toán</a>
+            <a href="../informatics.html">💻 Tin học</a>
+            <a href="../english.html">🇬🇧 Tiếng Anh</a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">❓ Quiz</a>
+            <a href="../flashcard.html">🧠 Flashcard</a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    📐 Toán → Giới hạn
+                </p>
+
+                <h1>∞ Giới hạn</h1>
+
+                <p class="lesson-intro">
+                    Làm quen với khái niệm giới hạn và cách tính đơn giản.
+                </p>
+
+
+                <div class="lesson-block">
+
+                    <h2>1. Khái niệm</h2>
+
+                    <p>
+                        Giới hạn mô tả giá trị mà một biểu thức
+                        tiến tới khi biến tiến tới một giá trị nào đó.
+                    </p>
+
+                    <div class="formula">
+                        lim f(x) = L
+                    </div>
+
+                </div>
+
+
+                <div class="lesson-block">
+
+                    <h2>2. Ví dụ</h2>
+
+                    <div class="formula">
+                        lim (x + 2) = 5
+                    </div>
+
+                    <p>
+                        khi x tiến tới 3.
+                    </p>
+
+                </div>
+
+
+                <div class="lesson-block exercise">
+
+                    <h2>3. 📝 Bài tập</h2>
+
+                    <p>
+                        Tính:
+                    </p>
+
+                    <div class="formula">
+                        lim (x + 4)
+                    </div>
+
+                    <p>
+                        khi x → 2.
+                    </p>
+
+                    <input
+                        type="number"
+                        id="answerInput"
+                        placeholder="Nhập đáp án">
+
+                    <button onclick="checkAnswer()">
+                        Kiểm tra
+                    </button>
+
+                    <p id="exerciseResult"></p>
+
+                </div>
+
+
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Giới hạn:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+                        <div id="progressFill"></div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+    <script src="../../js/math.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>

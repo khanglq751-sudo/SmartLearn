@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Technology Vocabulary - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <!-- THANH TRÊN -->
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+
+            <a href="../../index.html">
+                🏠 Trang chủ
+            </a>
+
+            <a href="../english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">
+                📐 Toán
+            </a>
+
+            <a href="../informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="../english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+            <a href="../flashcard.html">
+                🧠 Flashcard
+            </a>
+
+        </aside>
+
+
+        <!-- NỘI DUNG -->
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    🇬🇧 Tiếng Anh → Từ vựng → Technology
+                </p>
+
+                <h1>💻 Technology Vocabulary</h1>
+
+                <p class="lesson-intro">
+                    Học những từ vựng cơ bản về công nghệ.
+                </p>
+
+
+                <!-- TỪ MỚI -->
+                <div class="lesson-block">
+
+                    <h2>1. 📚 Từ mới</h2>
+
+                    <div class="example">
+
+                        <b>computer</b> → máy tính
+                        <br><br>
+
+                        <b>smartphone</b> → điện thoại thông minh
+                        <br><br>
+
+                        <b>keyboard</b> → bàn phím
+                        <br><br>
+
+                        <b>software</b> → phần mềm
+                        <br><br>
+
+                        <b>internet</b> → Internet
+
+                    </div>
+
+                </div>
+
+
+                <!-- VÍ DỤ -->
+                <div class="lesson-block">
+
+                    <h2>2. 💡 Ví dụ</h2>
+
+                    <div class="example">
+                        I use a computer every day.
+                    </div>
+
+                    <p>
+                        → Tôi sử dụng máy tính mỗi ngày.
+                    </p>
+
+
+                    <div class="example">
+                        My smartphone is very useful.
+                    </div>
+
+                    <p>
+                        → Điện thoại thông minh của tôi rất hữu ích.
+                    </p>
+
+                </div>
+
+
+                <!-- GHI NHỚ -->
+                <div class="lesson-block">
+
+                    <h2>3. 🧠 Mẹo ghi nhớ</h2>
+
+                    <p>
+                        Hãy đọc từ tiếng Anh trước,
+                        tự đoán nghĩa rồi mới kiểm tra đáp án.
+                    </p>
+
+                </div>
+
+
+                <!-- MINI QUIZ -->
+                <div class="lesson-block exercise">
+
+                    <h2>4. ❓ Mini Quiz</h2>
+
+                    <p>
+                        Từ <b>"keyboard"</b> có nghĩa là gì?
+                    </p>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkTechnologyAnswer('a')">
+
+                        A. Màn hình
+
+                    </button>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkTechnologyAnswer('b')">
+
+                        B. Bàn phím
+
+                    </button>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkTechnologyAnswer('c')">
+
+                        C. Phần mềm
+
+                    </button>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkTechnologyAnswer('d')">
+
+                        D. Máy tính
+
+                    </button>
+
+
+                    <p id="exerciseResult"></p>
+
+                </div>
+
+
+                <!-- TIẾN TRÌNH -->
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Technology:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+
+                        <div id="progressFill"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- TRỢ LÝ -->
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+
+    <script src="../../js/english.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>

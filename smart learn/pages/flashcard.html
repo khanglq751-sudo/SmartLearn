@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Flashcard - SmartLearn</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        🧠 SmartLearn
+    </div>
+
+    <div class="top-actions">
+
+        <a href="../index.html">
+            🏠 Trang chủ
+        </a>
+
+        <a href="math.html">
+            📐 Toán
+        </a>
+
+        <a href="informatics.html">
+            💻 Tin học
+        </a>
+
+        <a href="english.html">
+            🇬🇧 Tiếng Anh
+        </a>
+
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <h2>📚 Môn học</h2>
+
+        <a href="math.html">
+            📐 Toán
+        </a>
+
+        <a href="informatics.html">
+            💻 Tin học
+        </a>
+
+        <a href="english.html">
+            🇬🇧 Tiếng Anh
+        </a>
+
+        <hr>
+
+        <h2>🛠 Công cụ</h2>
+
+        <a href="quiz.html">
+            ❓ Quiz
+        </a>
+
+        <a href="flashcard.html">
+            🧠 Flashcard
+        </a>
+
+        <a href="progress.html">
+            📊 Tiến trình
+        </a>
+
+        <a href="history.html">
+            📜 Lịch sử
+        </a>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <section class="page-header">
+
+            <p class="small-title">
+                🧠 SmartLearn
+            </p>
+
+            <h1>Flashcard</h1>
+
+            <p>
+                Ôn lại kiến thức nhanh chóng.
+            </p>
+
+        </section>
+
+
+        <section class="flashcard-page">
+
+            <div class="flashcard-main">
+
+                <p id="flashcardSubject">
+                    📚 Toán
+                </p>
+
+                <h2 id="flashcardQuestion">
+                    Đang tải...
+                </h2>
+
+                <div
+                    id="flashcardAnswer"
+                    class="flashcard-answer">
+
+                </div>
+
+
+                <button
+                    id="showFlashcardAnswer"
+                    class="learn-button">
+
+                    Xem đáp án
+
+                </button>
+
+
+                <div
+                    id="flashcardRating"
+                    class="flashcard-rating">
+
+                    <p>
+                        Bạn nhớ câu này như thế nào?
+                    </p>
+
+                    <button
+                        class="rating-btn"
+                        data-level="forgot">
+
+                        😵 Quên
+
+                    </button>
+
+                    <button
+                        class="rating-btn"
+                        data-level="hard">
+
+                        😐 Khó
+
+                    </button>
+
+                    <button
+                        class="rating-btn"
+                        data-level="easy">
+
+                        😎 Dễ
+
+                    </button>
+
+                </div>
+
+
+                <button
+                    id="nextFlashcard"
+                    class="next-flashcard">
+
+                    Câu tiếp theo →
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<a href="chat.html"
+   class="floating-chat">
+
+    🤖
+
+</a>
+
+
+<script src="../js/flashcard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Mảng - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <!-- THANH TRÊN -->
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+
+            <a href="../../index.html">
+                🏠 Trang chủ
+            </a>
+
+            <a href="../informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">
+                📐 Toán
+            </a>
+
+            <a href="../informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="../english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+            <a href="../flashcard.html">
+                🧠 Flashcard
+            </a>
+
+        </aside>
+
+
+        <!-- NỘI DUNG -->
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    💻 Tin học → Mảng
+                </p>
+
+                <h1>📦 Mảng trong Python</h1>
+
+                <p class="lesson-intro">
+                    Làm quen với list, duyệt mảng và xử lý dữ liệu.
+                </p>
+
+
+                <!-- KHÁI NIỆM -->
+                <div class="lesson-block">
+
+                    <h2>1. Mảng là gì?</h2>
+
+                    <p>
+                        Trong Python, ta thường dùng
+                        <b>list</b> để lưu nhiều dữ liệu
+                        trong cùng một biến.
+                    </p>
+
+                    <div class="formula">
+                        a = [2, 5, 7, 9, 10]
+                    </div>
+
+                    <p>
+                        Các phần tử được đánh chỉ số từ
+                        <b>0</b>.
+                    </p>
+
+                    <div class="formula">
+                        a[0] = 2
+                    </div>
+
+                </div>
+
+
+                <!-- DUYỆT MẢNG -->
+                <div class="lesson-block">
+
+                    <h2>2. Duyệt mảng</h2>
+
+                    <p>
+                        Dùng vòng lặp <b>for</b> để đi qua
+                        từng phần tử.
+                    </p>
+
+                    <pre>
+a = [2, 5, 7, 9]
+
+for x in a:
+    print(x)
+                    </pre>
+
+                </div>
+
+
+                <!-- TỔNG -->
+                <div class="lesson-block">
+
+                    <h2>3. Tính tổng các phần tử</h2>
+
+                    <pre>
+a = [2, 5, 7, 9]
+
+tong = 0
+
+for x in a:
+    tong += x
+
+print(tong)
+                    </pre>
+
+                    <p>
+                        Kết quả:
+                    </p>
+
+                    <div class="formula">
+                        23
+                    </div>
+
+                </div>
+
+
+                <!-- TEST CASE -->
+                <div class="lesson-block">
+
+                    <h2>4. 🧪 Test case</h2>
+
+                    <p>
+                        <b>Input:</b>
+                    </p>
+
+                    <pre>
+5
+2 4 6 8 10
+                    </pre>
+
+                    <p>
+                        <b>Output:</b>
+                    </p>
+
+                    <pre>
+30
+                    </pre>
+
+                    <p>
+                        Vì:
+                        2 + 4 + 6 + 8 + 10 = 30
+                    </p>
+
+                </div>
+
+
+                <!-- BÀI TẬP -->
+                <div class="lesson-block exercise">
+
+                    <h2>5. 📝 Bài tập</h2>
+
+                    <p>
+                        Cho mảng:
+                    </p>
+
+                    <div class="example">
+                        3, 6, 2, 8, 5
+                    </div>
+
+                    <p>
+                        Hãy nhập <b>tổng các phần tử</b>.
+                    </p>
+
+                    <input
+                        type="number"
+                        id="answerInput"
+                        placeholder="Nhập đáp án">
+
+                    <button onclick="checkArrayAnswer()">
+                        Kiểm tra
+                    </button>
+
+                    <p id="exerciseResult"></p>
+
+                </div>
+
+
+                <!-- TIẾN TRÌNH -->
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Mảng:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+
+                        <div id="progressFill"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- TRỢ LÝ -->
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+
+    <script src="../../js/informatics.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>
