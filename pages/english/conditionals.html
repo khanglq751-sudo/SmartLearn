@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Conditional Sentences - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <!-- THANH TRÊN -->
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+
+            <a href="../../index.html">
+                🏠 Trang chủ
+            </a>
+
+            <a href="../english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">
+                📐 Toán
+            </a>
+
+            <a href="../informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="../english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+            <a href="../flashcard.html">
+                🧠 Flashcard
+            </a>
+
+        </aside>
+
+
+        <!-- NỘI DUNG -->
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    🇬🇧 Tiếng Anh → Ngữ pháp → Conditional Sentences
+                </p>
+
+                <h1>🔀 Conditional Sentences</h1>
+
+                <p class="lesson-intro">
+                    Tìm hiểu câu điều kiện loại 1, 2 và cách nhận biết.
+                </p>
+
+
+                <!-- LOẠI 1 -->
+                <div class="lesson-block">
+
+                    <h2>1. Câu điều kiện loại 1</h2>
+
+                    <p>
+                        Dùng để nói về một điều kiện có khả năng
+                        xảy ra ở hiện tại hoặc tương lai.
+                    </p>
+
+                    <div class="formula">
+                        If + S + V(s/es), S + will + V
+                    </div>
+
+                    <p><b>Ví dụ:</b></p>
+
+                    <div class="example">
+                        If it rains, I will stay at home.
+                    </div>
+
+                </div>
+
+
+                <!-- LOẠI 2 -->
+                <div class="lesson-block">
+
+                    <h2>2. Câu điều kiện loại 2</h2>
+
+                    <p>
+                        Dùng để nói về một tình huống giả định,
+                        không có thật hoặc khó xảy ra ở hiện tại.
+                    </p>
+
+                    <div class="formula">
+                        If + S + V2/ed, S + would + V
+                    </div>
+
+                    <p><b>Ví dụ:</b></p>
+
+                    <div class="example">
+                        If I had more time, I would learn English.
+                    </div>
+
+                </div>
+
+
+                <!-- SO SÁNH -->
+                <div class="lesson-block">
+
+                    <h2>3. 🧠 Ghi nhớ nhanh</h2>
+
+                    <div class="example">
+
+                        <b>Loại 1:</b>
+                        Có khả năng xảy ra
+                        <br><br>
+
+                        If + hiện tại đơn
+                        → will + V
+
+                        <br><br>
+
+                        <b>Loại 2:</b>
+                        Giả định / khó xảy ra
+
+                        <br><br>
+
+                        If + quá khứ đơn
+                        → would + V
+
+                    </div>
+
+                </div>
+
+
+                <!-- VÍ DỤ -->
+                <div class="lesson-block">
+
+                    <h2>4. 💡 Ví dụ</h2>
+
+                    <div class="example">
+                        If I study hard, I will pass the exam.
+                    </div>
+
+                    <p>
+                        Đây là câu điều kiện loại 1 vì hành động
+                        có khả năng xảy ra.
+                    </p>
+
+                    <div class="example">
+                        If I were rich, I would travel around the world.
+                    </div>
+
+                    <p>
+                        Đây là câu điều kiện loại 2 vì đây là
+                        tình huống giả định.
+                    </p>
+
+                </div>
+
+
+                <!-- BÀI TẬP -->
+                <div class="lesson-block exercise">
+
+                    <h2>5. 📝 Bài tập</h2>
+
+                    <p>
+                        Chọn đáp án đúng:
+                    </p>
+
+                    <div class="example">
+                        If I study hard, I ___ the exam.
+                    </div>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkConditionalAnswer('a')">
+
+                        A. pass
+
+                    </button>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkConditionalAnswer('b')">
+
+                        B. will pass
+
+                    </button>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkConditionalAnswer('c')">
+
+                        C. would pass
+
+                    </button>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkConditionalAnswer('d')">
+
+                        D. passed
+
+                    </button>
+
+
+                    <p id="exerciseResult"></p>
+
+                </div>
+
+
+                <!-- TIẾN TRÌNH -->
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Conditional Sentences:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+
+                        <div id="progressFill"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- TRỢ LÝ -->
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+
+    <script src="../../js/english.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>

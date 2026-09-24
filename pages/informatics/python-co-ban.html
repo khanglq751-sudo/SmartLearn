@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Python cơ bản - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+
+            <a href="../../index.html">
+                🏠 Trang chủ
+            </a>
+
+            <a href="../informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">📐 Toán</a>
+            <a href="../informatics.html">💻 Tin học</a>
+            <a href="../english.html">🇬🇧 Tiếng Anh</a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">❓ Quiz</a>
+            <a href="../flashcard.html">🧠 Flashcard</a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    💻 Tin học → Python cơ bản
+                </p>
+
+                <h1>🐍 Python cơ bản</h1>
+
+                <p class="lesson-intro">
+                    Bắt đầu từ những lệnh Python cơ bản nhất.
+                </p>
+
+
+                <div class="lesson-block">
+
+                    <h2>1. In dữ liệu</h2>
+
+                    <p>
+                        Hàm <b>print()</b> dùng để đưa dữ liệu
+                        ra màn hình.
+                    </p>
+
+                    <div class="formula">
+                        print("Hello World")
+                    </div>
+
+                </div>
+
+
+                <div class="lesson-block">
+
+                    <h2>2. Nhập dữ liệu</h2>
+
+                    <p>
+                        Hàm <b>input()</b> dùng để nhận dữ liệu
+                        từ người dùng.
+                    </p>
+
+                    <div class="formula">
+                        name = input()
+                    </div>
+
+                </div>
+
+
+                <div class="lesson-block">
+
+                    <h2>3. Biến</h2>
+
+                    <p>
+                        Biến dùng để lưu dữ liệu.
+                    </p>
+
+                    <div class="formula">
+                        age = 17
+                    </div>
+
+                    <div class="formula">
+                        name = "Khang"
+                    </div>
+
+                </div>
+
+
+                <!-- TEST -->
+                <div class="lesson-block exercise">
+
+                    <h2>4. 📝 Test nhanh</h2>
+
+                    <p>
+                        Lệnh nào dùng để in dữ liệu
+                        ra màn hình?
+                    </p>
+
+                    <button
+                        onclick="checkPythonAnswer('input')">
+                        input()
+                    </button>
+
+                    <button
+                        onclick="checkPythonAnswer('print')">
+                        print()
+                    </button>
+
+                    <button
+                        onclick="checkPythonAnswer('map')">
+                        map()
+                    </button>
+
+                    <p id="pythonResult"></p>
+
+                </div>
+
+
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Python cơ bản:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+                        <div id="progressFill"></div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+
+    <script src="../../js/informatics.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>

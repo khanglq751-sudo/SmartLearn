@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Cấp số cộng - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <!-- THANH TRÊN -->
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+
+            <a href="../../index.html">
+                🏠 Trang chủ
+            </a>
+
+            <a href="../math.html">
+                📐 Toán
+            </a>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">
+                📐 Toán
+            </a>
+
+            <a href="../informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="../english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+            <a href="../flashcard.html">
+                🧠 Flashcard
+            </a>
+
+        </aside>
+
+
+        <!-- NỘI DUNG BÀI HỌC -->
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    📐 Toán → Cấp số cộng
+                </p>
+
+                <h1>📈 Cấp số cộng</h1>
+
+                <p class="lesson-intro">
+                    Tìm hiểu khái niệm, công thức và luyện tập.
+                </p>
+
+
+                <!-- KHÁI NIỆM -->
+                <div class="lesson-block">
+
+                    <h2>1. Cấp số cộng là gì?</h2>
+
+                    <p>
+                        Cấp số cộng là một dãy số mà từ số hạng
+                        thứ hai trở đi, mỗi số hạng bằng số hạng
+                        trước cộng với một số không đổi.
+                    </p>
+
+                    <div class="formula">
+                        aₙ₊₁ = aₙ + d
+                    </div>
+
+                    <p>
+                        Trong đó <b>d</b> là công sai.
+                    </p>
+
+                </div>
+
+
+                <!-- CÔNG THỨC -->
+                <div class="lesson-block">
+
+                    <h2>2. Công thức cần nhớ</h2>
+
+                    <h3>Số hạng tổng quát</h3>
+
+                    <div class="formula">
+                        aₙ = a₁ + (n - 1)d
+                    </div>
+
+                    <h3>Tổng n số hạng đầu</h3>
+
+                    <div class="formula">
+                        Sₙ = n(a₁ + aₙ) / 2
+                    </div>
+
+                </div>
+
+
+                <!-- VÍ DỤ -->
+                <div class="lesson-block">
+
+                    <h2>3. Ví dụ</h2>
+
+                    <p>
+                        Cho cấp số cộng:
+                    </p>
+
+                    <div class="example">
+                        2, 5, 8, 11, 14
+                    </div>
+
+                    <p>
+                        Ta có:
+                    </p>
+
+                    <div class="formula">
+                        a₁ = 2
+                    </div>
+
+                    <div class="formula">
+                        d = 3
+                    </div>
+
+                    <div class="formula">
+                        n = 5
+                    </div>
+
+                    <p>
+                        Tổng 5 số hạng:
+                    </p>
+
+                    <div class="formula">
+                        S₅ = 5(2 + 14) / 2 = 40
+                    </div>
+
+                </div>
+
+
+                <!-- BÀI TẬP -->
+                <div class="lesson-block exercise">
+
+                    <h2>4. 📝 Bài tập</h2>
+
+                    <p>
+                        Cho cấp số cộng:
+                    </p>
+
+                    <div class="example">
+                        3, 6, 9, 12, 15
+                    </div>
+
+                    <p>
+                        Hãy tính tổng 5 số hạng đầu.
+                    </p>
+
+                    <input
+                        type="number"
+                        id="answerInput"
+                        placeholder="Nhập đáp án">
+
+                    <button onclick="checkAnswer()">
+                        Kiểm tra
+                    </button>
+
+                    <p id="exerciseResult"></p>
+
+                </div>
+
+
+                <!-- TIẾN ĐỘ -->
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Cấp số cộng:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+
+                        <div id="progressFill"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- TRỢ LÝ -->
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+
+    <script src="../../js/math.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>

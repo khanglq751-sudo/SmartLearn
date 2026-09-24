@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Cấp số nhân - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <!-- THANH TRÊN -->
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+
+            <a href="../../index.html">
+                🏠 Trang chủ
+            </a>
+
+            <a href="../math.html">
+                📐 Toán
+            </a>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">📐 Toán</a>
+            <a href="../informatics.html">💻 Tin học</a>
+            <a href="../english.html">🇬🇧 Tiếng Anh</a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">❓ Quiz</a>
+            <a href="../flashcard.html">🧠 Flashcard</a>
+
+        </aside>
+
+
+        <!-- NỘI DUNG -->
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    📐 Toán → Cấp số nhân
+                </p>
+
+                <h1>📊 Cấp số nhân</h1>
+
+                <p class="lesson-intro">
+                    Tìm hiểu khái niệm, công thức và luyện tập.
+                </p>
+
+
+                <!-- KHÁI NIỆM -->
+                <div class="lesson-block">
+
+                    <h2>1. Cấp số nhân là gì?</h2>
+
+                    <p>
+                        Cấp số nhân là một dãy số mà từ số hạng
+                        thứ hai trở đi, mỗi số hạng bằng số hạng
+                        trước nhân với một số không đổi.
+                    </p>
+
+                    <div class="formula">
+                        uₙ₊₁ = uₙ × q
+                    </div>
+
+                    <p>
+                        Trong đó <b>q</b> là công bội.
+                    </p>
+
+                </div>
+
+
+                <!-- CÔNG THỨC -->
+                <div class="lesson-block">
+
+                    <h2>2. Công thức cần nhớ</h2>
+
+                    <h3>Số hạng tổng quát</h3>
+
+                    <div class="formula">
+                        uₙ = u₁ × qⁿ⁻¹
+                    </div>
+
+                    <h3>Tổng n số hạng đầu</h3>
+
+                    <div class="formula">
+                        Sₙ = u₁(qⁿ - 1) / (q - 1)
+                    </div>
+
+                </div>
+
+
+                <!-- VÍ DỤ -->
+                <div class="lesson-block">
+
+                    <h2>3. Ví dụ</h2>
+
+                    <p>
+                        Cho cấp số nhân:
+                    </p>
+
+                    <div class="example">
+                        2, 4, 8, 16, 32
+                    </div>
+
+                    <p>
+                        Ta có:
+                    </p>
+
+                    <div class="formula">
+                        u₁ = 2
+                    </div>
+
+                    <div class="formula">
+                        q = 2
+                    </div>
+
+                    <div class="formula">
+                        n = 5
+                    </div>
+
+                    <p>
+                        Tổng 5 số hạng:
+                    </p>
+
+                    <div class="formula">
+                        S₅ = 2(2⁵ - 1)/(2 - 1) = 62
+                    </div>
+
+                </div>
+
+
+                <!-- BÀI TẬP -->
+                <div class="lesson-block exercise">
+
+                    <h2>4. 📝 Bài tập</h2>
+
+                    <p>
+                        Cho cấp số nhân:
+                    </p>
+
+                    <div class="example">
+                        3, 6, 12, 24
+                    </div>
+
+                    <p>
+                        Tính tổng 4 số hạng đầu.
+                    </p>
+
+                    <input
+                        type="number"
+                        id="answerInput"
+                        placeholder="Nhập đáp án">
+
+                    <button onclick="checkAnswer()">
+                        Kiểm tra
+                    </button>
+
+                    <p id="exerciseResult"></p>
+
+                </div>
+
+
+                <!-- TIẾN TRÌNH -->
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Cấp số nhân:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+
+                        <div id="progressFill"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- TRỢ LÝ -->
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+
+    <script src="../../js/math.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>

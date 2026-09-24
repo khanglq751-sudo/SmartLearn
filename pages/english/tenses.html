@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Thì trong tiếng Anh - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <!-- THANH TRÊN -->
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+
+            <a href="../../index.html">
+                🏠 Trang chủ
+            </a>
+
+            <a href="../english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">
+                📐 Toán
+            </a>
+
+            <a href="../informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="../english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+            <a href="../flashcard.html">
+                🧠 Flashcard
+            </a>
+
+        </aside>
+
+
+        <!-- NỘI DUNG -->
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    🇬🇧 Tiếng Anh → Ngữ pháp → Thì
+                </p>
+
+                <h1>⏰ Các thì cơ bản</h1>
+
+                <p class="lesson-intro">
+                    Làm quen với những thì thường gặp trong tiếng Anh.
+                </p>
+
+
+                <!-- PRESENT SIMPLE -->
+                <div class="lesson-block">
+
+                    <h2>1. Present Simple</h2>
+
+                    <p>
+                        Thì hiện tại đơn dùng để nói về thói quen,
+                        sự thật hoặc những việc thường xuyên xảy ra.
+                    </p>
+
+                    <div class="formula">
+                        S + V(s/es)
+                    </div>
+
+                    <p><b>Ví dụ:</b></p>
+
+                    <div class="example">
+                        She goes to school every day.
+                    </div>
+
+                </div>
+
+
+                <!-- PRESENT CONTINUOUS -->
+                <div class="lesson-block">
+
+                    <h2>2. Present Continuous</h2>
+
+                    <p>
+                        Dùng để diễn tả hành động đang xảy ra
+                        tại thời điểm nói.
+                    </p>
+
+                    <div class="formula">
+                        S + am/is/are + V-ing
+                    </div>
+
+                    <p><b>Ví dụ:</b></p>
+
+                    <div class="example">
+                        She is studying now.
+                    </div>
+
+                </div>
+
+
+                <!-- PAST SIMPLE -->
+                <div class="lesson-block">
+
+                    <h2>3. Past Simple</h2>
+
+                    <p>
+                        Dùng để diễn tả một hành động đã xảy ra
+                        và kết thúc trong quá khứ.
+                    </p>
+
+                    <div class="formula">
+                        S + V2/ed
+                    </div>
+
+                    <p><b>Ví dụ:</b></p>
+
+                    <div class="example">
+                        She visited Hanoi yesterday.
+                    </div>
+
+                </div>
+
+
+                <!-- FUTURE SIMPLE -->
+                <div class="lesson-block">
+
+                    <h2>4. Future Simple</h2>
+
+                    <p>
+                        Dùng để nói về một hành động sẽ xảy ra
+                        trong tương lai.
+                    </p>
+
+                    <div class="formula">
+                        S + will + V
+                    </div>
+
+                    <p><b>Ví dụ:</b></p>
+
+                    <div class="example">
+                        She will study tomorrow.
+                    </div>
+
+                </div>
+
+
+                <!-- BẢNG GHI NHỚ -->
+                <div class="lesson-block">
+
+                    <h2>5. 🧠 Ghi nhớ nhanh</h2>
+
+                    <div class="example">
+                        <b>every day</b> → Present Simple
+                        <br><br>
+
+                        <b>now / at the moment</b>
+                        → Present Continuous
+                        <br><br>
+
+                        <b>yesterday / last week</b>
+                        → Past Simple
+                        <br><br>
+
+                        <b>tomorrow / next week</b>
+                        → Future Simple
+                    </div>
+
+                </div>
+
+
+                <!-- BÀI TẬP -->
+                <div class="lesson-block exercise">
+
+                    <h2>6. 📝 Bài tập</h2>
+
+                    <p>
+                        Chọn thì đúng:
+                    </p>
+
+                    <div class="example">
+                        "Tom is playing football now."
+                    </div>
+
+                    <p>
+                        Câu trên sử dụng thì nào?
+                    </p>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkTenseAnswer('simple')">
+                        Present Simple
+                    </button>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkTenseAnswer('continuous')">
+                        Present Continuous
+                    </button>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkTenseAnswer('past')">
+                        Past Simple
+                    </button>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkTenseAnswer('future')">
+                        Future Simple
+                    </button>
+
+
+                    <p id="exerciseResult"></p>
+
+                </div>
+
+
+                <!-- TIẾN TRÌNH -->
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Thì trong tiếng Anh:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+
+                        <div id="progressFill"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- TRỢ LÝ -->
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+
+    <script src="../../js/english.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Chuỗi - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+
+            <a href="../../index.html">
+                🏠 Trang chủ
+            </a>
+
+            <a href="../informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">📐 Toán</a>
+            <a href="../informatics.html">💻 Tin học</a>
+            <a href="../english.html">🇬🇧 Tiếng Anh</a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">❓ Quiz</a>
+            <a href="../flashcard.html">🧠 Flashcard</a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    💻 Tin học → Chuỗi
+                </p>
+
+                <h1>🔤 Chuỗi trong Python</h1>
+
+                <p class="lesson-intro">
+                    Học cách lưu trữ và xử lý dữ liệu dạng chuỗi.
+                </p>
+
+
+                <!-- KHÁI NIỆM -->
+                <div class="lesson-block">
+
+                    <h2>1. Chuỗi là gì?</h2>
+
+                    <p>
+                        Chuỗi là một dãy các ký tự được đặt trong
+                        dấu nháy đơn hoặc dấu nháy kép.
+                    </p>
+
+                    <pre>
+name = "SmartLearn"
+                    </pre>
+
+                </div>
+
+
+                <!-- TRUY CẬP KÝ TỰ -->
+                <div class="lesson-block">
+
+                    <h2>2. Truy cập từng ký tự</h2>
+
+                    <p>
+                        Chỉ số của chuỗi bắt đầu từ <b>0</b>.
+                    </p>
+
+                    <pre>
+s = "Python"
+
+print(s[0])
+print(s[1])
+                    </pre>
+
+                    <p>
+                        Kết quả:
+                    </p>
+
+                    <div class="formula">
+                        P<br>
+                        y
+                    </div>
+
+                </div>
+
+
+                <!-- HÀM THƯỜNG DÙNG -->
+                <div class="lesson-block">
+
+                    <h2>3. Một số cách xử lý chuỗi</h2>
+
+                    <pre>
+s = "hello"
+
+print(len(s))
+print(s.upper())
+print(s.lower())
+                    </pre>
+
+                    <p>
+                        <b>len()</b> → độ dài chuỗi.
+                    </p>
+
+                    <p>
+                        <b>upper()</b> → chuyển thành chữ hoa.
+                    </p>
+
+                    <p>
+                        <b>lower()</b> → chuyển thành chữ thường.
+                    </p>
+
+                </div>
+
+
+                <!-- ĐẾM -->
+                <div class="lesson-block">
+
+                    <h2>4. Đếm ký tự</h2>
+
+                    <pre>
+s = "banana"
+
+count = 0
+
+for x in s:
+
+    if x == "a":
+        count += 1
+
+print(count)
+                    </pre>
+
+                    <p>
+                        Kết quả:
+                    </p>
+
+                    <div class="formula">
+                        3
+                    </div>
+
+                </div>
+
+
+                <!-- TEST CASE -->
+                <div class="lesson-block">
+
+                    <h2>5. 🧪 Test case</h2>
+
+                    <p>
+                        Bài toán: Đếm số ký tự <b>a</b>.
+                    </p>
+
+                    <p>
+                        <b>Input:</b>
+                    </p>
+
+                    <pre>
+banana
+                    </pre>
+
+                    <p>
+                        <b>Output:</b>
+                    </p>
+
+                    <pre>
+3
+                    </pre>
+
+                </div>
+
+
+                <!-- BÀI TẬP -->
+                <div class="lesson-block exercise">
+
+                    <h2>6. 📝 Bài tập</h2>
+
+                    <p>
+                        Cho chuỗi:
+                    </p>
+
+                    <div class="example">
+                        programming
+                    </div>
+
+                    <p>
+                        Có bao nhiêu ký tự <b>m</b>?
+                    </p>
+
+                    <input
+                        type="number"
+                        id="answerInput"
+                        placeholder="Nhập đáp án">
+
+                    <button onclick="checkStringAnswer()">
+                        Kiểm tra
+                    </button>
+
+                    <p id="exerciseResult"></p>
+
+                </div>
+
+
+                <!-- TIẾN TRÌNH -->
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Chuỗi:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+
+                        <div id="progressFill"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+
+    <script src="../../js/informatics.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>

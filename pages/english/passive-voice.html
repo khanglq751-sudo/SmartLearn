@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Passive Voice - SmartLearn</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <!-- THANH TRÊN -->
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 SmartLearn
+        </div>
+
+        <div class="top-actions">
+
+            <a href="../../index.html">
+                🏠 Trang chủ
+            </a>
+
+            <a href="../english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+
+            <a href="../quiz.html">
+                ❓ Quiz
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>📚 Môn học</h2>
+
+            <a href="../math.html">📐 Toán</a>
+
+            <a href="../informatics.html">
+                💻 Tin học
+            </a>
+
+            <a href="../english.html">
+                🇬🇧 Tiếng Anh
+            </a>
+
+            <hr>
+
+            <h2>🛠 Công cụ</h2>
+
+            <a href="../quiz.html">❓ Quiz</a>
+
+            <a href="../flashcard.html">
+                🧠 Flashcard
+            </a>
+
+        </aside>
+
+
+        <!-- NỘI DUNG -->
+        <main class="main-content">
+
+            <section class="lesson-page">
+
+                <p class="small-title">
+                    🇬🇧 Tiếng Anh → Ngữ pháp → Passive Voice
+                </p>
+
+                <h1>🔄 Passive Voice</h1>
+
+                <p class="lesson-intro">
+                    Học cách chuyển câu chủ động sang câu bị động.
+                </p>
+
+
+                <!-- KHÁI NIỆM -->
+                <div class="lesson-block">
+
+                    <h2>1. Câu bị động là gì?</h2>
+
+                    <p>
+                        Câu bị động được dùng khi muốn nhấn mạnh
+                        người hoặc vật chịu tác động của hành động.
+                    </p>
+
+                    <div class="formula">
+                        S + be + V3/ed
+                    </div>
+
+                </div>
+
+
+                <!-- CÁCH CHUYỂN -->
+                <div class="lesson-block">
+
+                    <h2>2. Cách chuyển câu chủ động</h2>
+
+                    <p>
+                        Câu chủ động:
+                    </p>
+
+                    <div class="example">
+                        Tom writes a letter.
+                    </div>
+
+                    <p>
+                        Đưa tân ngữ lên đầu câu:
+                    </p>
+
+                    <div class="example">
+                        A letter ...
+                    </div>
+
+                    <p>
+                        Chia động từ <b>be</b> theo thì
+                        và chuyển động từ chính sang V3/ed:
+                    </p>
+
+                    <div class="example">
+                        A letter is written by Tom.
+                    </div>
+
+                </div>
+
+
+                <!-- HIỆN TẠI ĐƠN -->
+                <div class="lesson-block">
+
+                    <h2>3. Present Simple</h2>
+
+                    <div class="formula">
+                        am / is / are + V3/ed
+                    </div>
+
+                    <p><b>Ví dụ:</b></p>
+
+                    <div class="example">
+                        English is spoken in many countries.
+                    </div>
+
+                </div>
+
+
+                <!-- QUÁ KHỨ ĐƠN -->
+                <div class="lesson-block">
+
+                    <h2>4. Past Simple</h2>
+
+                    <div class="formula">
+                        was / were + V3/ed
+                    </div>
+
+                    <p><b>Ví dụ:</b></p>
+
+                    <div class="example">
+                        The window was broken yesterday.
+                    </div>
+
+                </div>
+
+
+                <!-- BÀI TẬP -->
+                <div class="lesson-block exercise">
+
+                    <h2>5. 📝 Bài tập</h2>
+
+                    <p>
+                        Chọn câu bị động đúng của:
+                    </p>
+
+                    <div class="example">
+                        "They clean the room every day."
+                    </div>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkPassiveAnswer('a')">
+
+                        A. The room is cleaned every day.
+
+                    </button>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkPassiveAnswer('b')">
+
+                        B. The room cleaned every day.
+
+                    </button>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkPassiveAnswer('c')">
+
+                        C. The room was cleaned every day.
+
+                    </button>
+
+
+                    <button
+                        class="lesson-option"
+                        onclick="checkPassiveAnswer('d')">
+
+                        D. The room is cleaning every day.
+
+                    </button>
+
+
+                    <p id="exerciseResult"></p>
+
+                </div>
+
+
+                <!-- TIẾN TRÌNH -->
+                <div class="lesson-progress">
+
+                    <h2>📊 Tiến trình</h2>
+
+                    <p>
+                        Passive Voice:
+                        <b id="topicProgress">0%</b>
+                    </p>
+
+                    <div class="lesson-progress-bar">
+
+                        <div id="progressFill"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- TRỢ LÝ NỔI -->
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header"><div>🤖 <b>SmartLearn Assistant</b></div><button onclick="toggleChat()">✕</button></div>
+          <div id="chatMessages" class="chat-messages"><div class="bot-message">👋 Xin chào! Mình là trợ lý SmartLearn. Bạn đang không hiểu phần nào?</div></div>
+          <div class="chat-input"><input type="text" id="chatInput" placeholder="Nhập câu hỏi..."><button onclick="sendMessage()">Gửi</button></div>
+      </div>
+      <button class="floating-chat"
+         onclick="toggleChat()"
+         title="Trợ lý học tập">
+        🤖
+     </button>
+
+
+    <script src="../../js/english.js"></script>
+    <script src="../../js/chat.js"></script>
+
+</body>
+
+</html>
